@@ -1,0 +1,5 @@
+INDEX VERSION 1.4+/Users/macbookpro/Desktop/Interceptors/Interceptor/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2480796021.index
+2986560071.index
+2674403461.index
+3186763358.index

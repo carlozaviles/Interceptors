@@ -1,0 +1,60 @@
+package jc.jc.filters;
+
+import java.io.IOException;
+import java.util.Date;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.interfaces.DecodedJWT;
+
+@WebFilter(filterName="/FiltroJC",urlPatterns="/*" )
+public class FiltroJC implements Filter {
+
+	public void destroy() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
+			throws IOException, ServletException {
+		HttpServletRequest request = (HttpServletRequest) req;
+		System.err.println("******* JC RULES!!!");
+		System.out.println("******* Entro al filtro customizado!!!");
+		System.out.println("**********Imprimo header Authorization Bearer "+request.getHeader("Authorization"));
+		//Get the IP address of client machine.
+		
+		
+		DecodedJWT jwt = JWT.decode(request.getHeader("Authorization"));
+		
+		System.err.println("******* Desentramando JWT.... ");
+		System.err.println("******* Imprimo Header.... ");
+		System.out.println("Header completa... "+jwt.getHeader());
+		System.out.println("Algoritmo: "+jwt.getAlgorithm());
+		System.out.println("Typo: "+jwt.getType());
+		System.out.println("******* Imprimo Payload");
+		System.out.println("Payload completo... "+jwt.getPayload());
+		System.out.println("Token emitido el... "+jwt.getIssuedAt());
+		System.out.println("El asunto es..."+jwt.getSubject());
+		
+
+		
+	}
+
+	public void init(FilterConfig config) throws ServletException {
+		//Get init parameter
+			String testParam = config.getInitParameter("test-param");
+				
+				//Print the init parameter
+				System.out.println("Test Param: " + testParam);
+		
+	}
+
+}

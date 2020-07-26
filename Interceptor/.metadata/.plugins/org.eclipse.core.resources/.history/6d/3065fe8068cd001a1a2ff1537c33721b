@@ -1,0 +1,56 @@
+package jc.jc.filters;
+
+import java.io.IOException;
+import java.util.Date;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+
+@WebFilter(filterName="/FiltroJC",urlPatterns="/*" )
+public class FiltroJC implements Filter {
+
+	public void destroy() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
+			throws IOException, ServletException {
+		HttpServletRequest request = (HttpServletRequest) req;
+		System.err.println("******* JC RULES!!!");
+		System.out.println("**********Imprimo header Authorization "+request.getHeader("Authorization"));
+		//Get the IP address of client machine.
+		System.err.println("******* Desentramando JWT.... ");
+		System.out.println("-----BEGIN PUBLIC KEY-----\n" + 
+				"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnzyis1ZjfNB0bBgKFMSv\n" + 
+				"vkTtwlvBsaJq7S5wA+kzeVOVpVWwkWdVha4s38XM/pa/yr47av7+z3VTmvDRyAHc\n" + 
+				"aT92whREFpLv9cj5lTeJSibyr/Mrm/YtjCZVWgaOYIhwrXwKLqPr/11inWsAkfIy\n" + 
+				"tvHWTxZYEcXLgAXFuUuaS3uF9gEiNQwzGTU1v0FqkqTBr4B8nW3HCN47XUu0t8Y0\n" + 
+				"e+lf4s4OxQawWD79J9/5d3Ry0vbV3Am1FtGJiJvOwRsIfVChDpYStTcHTCMqtvWb\n" + 
+				"V6L11BWkpzGXSW4Hv43qa+GSYOD2QU68Mb59oSk2OB+BtOLpJofmbGEGgvmwyCI9\n" + 
+				"MwIDAQAB\n" + 
+				"-----END PUBLIC KEY-----");
+		String ipAddress = request.getRemoteAddr();
+		
+		//Log the IP address and current timestamp.
+		System.out.println("IP "+ipAddress + ", Time " 
+							+ new Date().toString());
+		
+	}
+
+	public void init(FilterConfig config) throws ServletException {
+		//Get init parameter
+			String testParam = config.getInitParameter("test-param");
+				
+				//Print the init parameter
+				System.out.println("Test Param: " + testParam);
+		
+	}
+
+}
