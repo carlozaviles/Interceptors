@@ -27,7 +27,7 @@ public class FiltroJC implements Filter {
 		System.err.println("******* JC RULES!!!");
 		System.out.println("******* Entro al filtro customizado!!!");
 		System.out.println("**********Imprimo header Authorization Bearer "+request.getHeader("Authorization"));
-		//Get the IP address of client machine.
+		
 		
 		
 		DecodedJWT jwt = JWT.decode(request.getHeader("Authorization"));

@@ -275,3 +275,18 @@
 2020-07-26 14:57:04,657 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/macbookpro/Desktop/Interceptors/Interceptor/1/src/main/resources
 2020-07-26 14:57:04,658 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2020-07-26 14:57:04,659 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/macbookpro/Desktop/Interceptors/Interceptor/1/src/test/resources
+2020-07-26 15:19:50,025 [main] WARN  org.eclipse.jgit.util.FS - Exception caught during execution of command '[git, --version]' in '/usr/bin', return code '1', error message 'xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+'
+2020-07-26 15:20:00,458 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-07-26 15:20:06,898 [Worker-13: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: jcag.jcag:1:1.0-SNAPSHOT @ /Users/macbookpro/Desktop/InterceptorsRaiz/Interceptors/Interceptor/1/pom.xml.
+2020-07-26 15:20:11,654 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-26 15:20:11,663 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/macbookpro/Desktop/InterceptorsRaiz/Interceptors/Interceptor/1/src/main/resources
+2020-07-26 15:20:11,666 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-26 15:20:11,667 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/macbookpro/Desktop/InterceptorsRaiz/Interceptors/Interceptor/1/src/test/resources
+2020-07-26 15:20:11,671 [Worker-13: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of 1
+2020-07-26 15:20:11,672 [Worker-13: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for 1
+2020-07-26 15:20:11,746 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-26 15:20:18,931 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-26 15:20:18,955 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/macbookpro/Desktop/InterceptorsRaiz/Interceptors/Interceptor/1/src/main/resources
+2020-07-26 15:20:19,073 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-26 15:20:19,074 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/macbookpro/Desktop/InterceptorsRaiz/Interceptors/Interceptor/1/src/test/resources
